@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+####### Github-API
+One page application for querying atom issues.
 
-## Available Scripts
+<img width="1230" alt="screen shot 2019-02-08 at 12 56 09" src="https://user-images.githubusercontent.com/35367494/52479651-4478b080-2ba1-11e9-82f8-1496901591b9.png">
 
-In the project directory, you can run:
+####### Requirements
+Imagine you have to work in the the following scenario: Our customer support team have to interact with the Github issues search throughout the day. They're put off by typing queries and would much rather an interactive query builder that hides the actual query from them. Can you come up with a design that allows our customer support team to search GitHub issues in a more point-and-click, user-friendly way that doesn't involve typing complex queries? For the purpose of this exercise imagine that they are interested in all the filter parameters the API offers (author, labels, status, and so on). You will be building it as a Single-Page Application using HTML, CSS and Javascript. You can find the documentation for the Github API here: https://developer.github.com/v3/issues/ The most important feature the app has to include is a logic filter for the list of Github issues that scopes the results based on the query parameters. You are free to use any Javascript or CSS frameworks/libraries of your choice.
 
-### `npm start`
+####### Technologies
+React: Used React as a SPA becuase of its ease of curating components from scratch.
+Redux: As the single source of truth for data sharing.
+Axios: Promise based HTTP client for the browser and node.js
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Decisions:
+Used bootstrap and some inbuilt css for styling. In future would use some styled-components.
+TODO : Need to add pagination.Add the repo name to be configurable. 
+Used create-react-app for bootstrapping the project.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+####### Approach
+App:This is the main component and acts as a container for the other components. Haven't used it as a case of 'lifting state up' case.
 
-### `npm test`
+searchForm: Stateful component for taking the query parameters based on which search will be performed.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+SearchResults: This components gets the API information from the app, displays the information accordingly.
 
-### `npm run build`
+fetchFailure: This is a stateless component which displays the fetch failure condition.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+####### Instructions to build the project
+Download the project (zip or clone)
+Install node and npm
+Be sure to be inside the folder tessian
+Run npm install
+Run npm start
+Enjoy
